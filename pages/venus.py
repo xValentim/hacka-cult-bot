@@ -39,13 +39,13 @@ cs_sidebar()
 components.iframe("https://lumalabs.ai/embed/18947f38-0421-47fa-bb20-51c658a144b7?mode=sparkles&background=%23ffffff&color=%23000000&cinematicVideo=undefined&showMenu=false", height=720)
 
 # session state
-if "chat_history" not in st.session_state:
-    st.session_state.chat_history = [
+if "chat_history_venus" not in st.session_state:
+    st.session_state.chat_history_venus = [
         AIMessage(content="Olá, sou uma IA. Gostaria de saber mais sobre a obra Venus Victrix de Pierre-Auguste Renoir?"),
     ]
 
 # conversation
-for message in st.session_state.chat_history:
+for message in st.session_state.chat_history_venus:
     if isinstance(message, AIMessage):
         with st.chat_message("AI", avatar="🤖"):
             st.write(message.content)
@@ -59,7 +59,7 @@ user_query = st.chat_input("Digite algo...")
 
 if user_query is not None and user_query != "":
     
-    st.session_state.chat_history.append(HumanMessage(content=user_query))
+    st.session_state.chat_history_venus.append(HumanMessage(content=user_query))
 
     with st.chat_message("Human", avatar="👤"):
         st.markdown(user_query)
@@ -68,4 +68,4 @@ if user_query is not None and user_query != "":
         with st.spinner("Thinking..."):
             response = st.write_stream(chain.stream({"input": user_query}))
         
-    st.session_state.chat_history.append(AIMessage(content=str(response)))
+    st.session_state.chat_history_venus.append(AIMessage(content=str(response)))
