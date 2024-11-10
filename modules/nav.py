@@ -19,6 +19,9 @@ def GiNav():
 def JoaoNav():
     st.sidebar.page_link("pages/joao_moura.py", label="João Moura - Chat", icon='🤖')
 
+def DomNav():
+    st.sidebar.page_link("pages/dom_casmurro.py", label="Dom - Chat", icon='🎨')
+
 def MenuButtons():
     # if 'authentication_status' not in ss:
     #     ss.authentication_status = False
@@ -30,6 +33,7 @@ def MenuButtons():
     # # Se o usuário logar, mostra as demais telas.
     # if ss["authentication_status"]:
     st.sidebar.header("Acesse as obras aqui:")
+    DomNav()
     VenusNav()
     AmnesiaNav()
     GiNav()
