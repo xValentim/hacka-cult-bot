@@ -1,0 +1,6 @@
+jupyters/
+__pycache__
+.venv
+.env
+env/
+*.splat

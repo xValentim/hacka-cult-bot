@@ -1,0 +1,14 @@
+faiss-cpu
+langchain-core
+langchain
+langchain-community
+langchain-openai
+langchain-groq
+streamlit
+python-dotenv
+pypdf
+html2text
+streamlit
+unidecode
+docx2txt
+streamlit_authenticator
