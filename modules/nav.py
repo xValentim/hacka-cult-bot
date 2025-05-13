@@ -36,5 +36,5 @@ def MenuButtons():
     DomNav()
     VenusNav()
     AmnesiaNav()
-    GiNav()
-    JoaoNav()
+    # GiNav()
+    # JoaoNav()
