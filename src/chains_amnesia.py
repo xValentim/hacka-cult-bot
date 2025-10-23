@@ -9,8 +9,8 @@ from langchain_groq import ChatGroq
 
 load_dotenv()
 
-# llm = ChatOpenAI(model="gpt-4o-mini", temperature=0.2)
-llm = ChatGroq(model="llama-3.1-70b-versatile", temperature=0)
+llm = ChatOpenAI(model="gpt-4o-mini", temperature=0.2)
+# llm = ChatGroq(model="llama-3.1-70b-versatile", temperature=0)
 
 system_prompt = """
 
